@@ -1,4 +1,5 @@
 package basics;
+
 public class Main {
     public Main() {
     }
@@ -11,7 +12,7 @@ public class Main {
         int flipsCount = 0;
         int headCount = 0;
 
-        for(int i = 1; i <= n; ++i) {
+        for (int i = 1; i <= n; ++i) {
             Random r = new Random();
             double flips = r.nextDouble();
             if (flips < 0.5D) {
@@ -30,14 +31,14 @@ public class Main {
     public static void clock() {
         int perSec = 0;
 
-        while(true) {
+        while (true) {
             int second;
             String time;
             do {
                 LocalDateTime now = LocalDateTime.now();
                 second = now.getSecond();
                 time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-            } while(perSec == second);
+            } while (perSec == second);
 
             perSec = second;
             System.out.println(time);
