@@ -1,36 +1,44 @@
 package basics;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
+
 public class Main {
     public Main() {
     }
 
+    // pluralize function :
+    // pluralized word will end with "s"
     public static String pluralize(String word, int num) {
         return num != 0 && num <= 1 ? word : word + "s";
     }
 
-    public static void flipNHeads(int n) {
-        int flipsCount = 0;
-        int headCount = 0;
-
-        for (int i = 1; i <= n; ++i) {
-            Random r = new Random();
-            double flips = r.nextDouble();
-            if (flips < 0.5D) {
-                System.out.println("tail");
+    // flipNHeads that accepts an integer n and flips coins until n heads are
+    // flipped in a row.
+    static void flipNHeads(int n) {
+        int flipsCount = 0, headCount = 0;
+        double flips;
+        Random r = new Random();
+        while (headCount < n) {
+            flips = r.nextDouble();
+            if (flips < 0.5) {
+                System.out.println("tails");
+                flipsCount++;
+                headCount = 0;
             } else {
-                System.out.println("head");
-                ++headCount;
+                System.out.println("heads");
+                flipsCount++;
+                headCount++;
             }
-
-            ++flipsCount;
         }
-
-        System.out.println("It took " + flipsCount + " flips to flip " + headCount + " head in a row.");
+        System.out.println(
+                "It took " + flipsCount + pluralize(" flip", headCount) + " to flip " + n + " heads in a row.");
     }
 
+    // clock function prints out the current time to the console, second by second.
     public static void clock() {
         int perSec = 0;
-
         while (true) {
             int second;
             String time;
@@ -52,8 +60,8 @@ public class Main {
         System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
         int turtleCount = 0;
         System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
-        flipNHeads(4);
-        flipNHeads(1);
+        // flipNHeads(4);
+        // flipNHeads(1);
         flipNHeads(6);
         clock();
     }
