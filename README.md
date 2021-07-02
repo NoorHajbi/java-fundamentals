@@ -10,24 +10,18 @@
 
 ### Lab: 02 -  Arrays, for loops, testing
 time : almost 5 hours.
-
+## It contains 4 methods:
+1. **roll -> For rolling dice and returns arrayList**
+2. **Contains Duplicates -> returns true if the previous function contains duplicate and false if not**
+3. **calculatingAvg -> Calculate averge for an array**
+4. **lowestaverage -> accepts 2 dimensional array and returns an array(row) with the lowest average**
 Me, Amara Al Balkhi, and Alaa were helping each others and worked as a partners in some lines.
 
-<!-- Testing
-Use JUnit to write at least one test for each of the Feature Tasks.
-Your tests should ensure that each of your methods work correctly.
 
-Submission Instructions
-Continue working in your repository for the first 5 labs.
-Work on a non-master branch and make commits appropriately.
-Ensure that you can run ./gradlew test inside of your basiclibrary directory to test your work.
-Update your root README file to include the work you did today.
-Create a pull request to your master branch with your work for this lab.
-Submit the link to that pull request on Canvas. Add a comment with the amount of time you spent on this assignment. -->
 
 | Lab |             path                             |
 |-----|----------------------------------------------|
 |lab01|[Java primitives and control flow](basics/Main.java)|
-|lab02|     |
+|lab02|[Arrays, for loops, testing](basiclibrary/Library.java)|
 |lab03|     |
 
