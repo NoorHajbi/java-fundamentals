@@ -44,15 +44,11 @@ public class Library {
     }
 
     //4. Arrays of Arrays
-    public static void lowestaverage() {
+    //Return the array with the lowest average.
+    public static int[] lowestaverage(int[][] weeklyMonthTemperatures) {
         int min = 0, sum, avgArr;
-        int[] minArr;
-        int[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
+        int[] minArr = weeklyMonthTemperatures[0];
+       
         for (int i = 0; i < weeklyMonthTemperatures.length; i++) {
             sum = 0;
             for (int j = 0; j < weeklyMonthTemperatures[i].length; j++) {
@@ -63,8 +59,9 @@ public class Library {
 
             if (min > avgArr)
                 min = avgArr;
+                minArr = weeklyMonthTemperatures[i];
         }
-        System.out.println("Min Avg= " + min);
+        return minArr;
     }
 
     public static void main(String[] args) {
@@ -75,6 +72,12 @@ public class Library {
         System.out.println();
         System.out.println("Calculating Averages= " + calculatingAvg(newArr));
         System.out.println();
-        // System.out.println(lowestaverage()); //return the array with the lowest average.
+        int[][] weeklyMonthTemperatures = {
+            {66, 64, 58, 65, 71, 57, 60},
+            {57, 65, 65, 70, 72, 65, 51},
+            {55, 54, 60, 53, 59, 57, 61},
+            {65, 56, 55, 52, 55, 62, 57}
+    };
+    System.out.println("Lowest Average Array= " +Arrays.toString(lowestaverage(weeklyMonthTemperatures))); 
     }
 }
