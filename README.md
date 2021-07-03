@@ -26,6 +26,7 @@ Me, Amara Al Balkhi, and Alaa were helping each others and worked as a partners 
 | Lab |             path                             |
 |-----|----------------------------------------------|
 |lab01|[Java primitives and control flow](basics/Main.java)|
-|lab02|[Arrays, for loops, testing](basiclibrary/Library.java)|
-|lab03|     |
+|lab02|[Arrays, for loops, testing](basiclibrary/src/main/java/Library.java)|
+|lab03-1|[Maps](basiclibrary/src/main/java/Library.java)|     |
+|lab03-2|[File I/O](linter/src/main/java/App.java)|     |
 
