@@ -103,11 +103,13 @@ public class Library {
                 secondPerson += 1;
             }
         }
-        if (firstPerson > secondPerson) {
+        if (firstPerson > secondPerson)
             return "Bush";
-        } else {
+        else if (firstPerson < secondPerson)
             return "Shrub";
-        }
+
+        else
+            return "No Winner!";
     }
 
     public static void main(String[] args) {
@@ -142,4 +144,6 @@ public class Library {
         System.out.println(tally(votes) + " received the most votes!");
 
     }
+
+
 }
