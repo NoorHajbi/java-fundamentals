@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LibraryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-04T18:27:06" hostname="DESKTOP-0KIMU03" time="0.011">
+  <properties/>
+  <testcase name="testTally" classname="LibraryTest" time="0.009"/>
+  <testcase name="testTallyNull" classname="LibraryTest" time="0.0"/>
+  <testcase name="testWeatherData" classname="LibraryTest" time="0.002"/>
+  <system-out><![CDATA[High: 72
+Low: 51
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
