@@ -28,6 +28,9 @@ time : almost 7 hours.
 2. file I/O, that checks the lines that missing semiColon in the code.
 except if the line is empty, or ends with {, or with }, or even if the line contains if or else.
 
+### Lab: 06
+
+[Source](https://www.javatips.net/api/OrderNowAndroid-master/src/com/data/menu/Restaurant.java#)
 ---
 # Table of contents: 
 
