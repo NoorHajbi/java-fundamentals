@@ -28,6 +28,8 @@ time : almost 7 hours.
 2. file I/O, that checks the lines that missing semiColon in the code.
 except if the line is empty, or ends with {, or with }, or even if the line contains if or else.
 
+---
+
 ### Lab: 06 : Inheritance and Interfaces
 
 1. Class **Restaurant** ->
@@ -36,6 +38,7 @@ except if the line is empty, or ends with {, or with }, or even if the line cont
 - Includes a body, an author, and a number of stars.
 - A Review is about a single Restaurant. 
 
+- So when a review added, the number of resturant's stars will be changed.
 
 [Source](https://www.javatips.net/api/OrderNowAndroid-master/src/com/data/menu/Restaurant.java#)
 ---
