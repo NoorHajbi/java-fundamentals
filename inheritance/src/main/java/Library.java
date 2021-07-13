@@ -7,31 +7,42 @@ import classes.Review;
 public class Library {
     public static void main(String[] args) {
         //Restaurant
-        Restaurant testRes = new Restaurant("Burger", 262.22);
+//        Restaurant testRes = new Restaurant("Burger", 262.2);
         //Review
-        Review testRev = new Review("Not Good", "Noor", 0);
+        Review testRev = new Review("Great!", "Noor", 5);
+//        Review testev = new Review("Not Good", "Noor", 4);
+
+//        //Print Review
+//
+//        System.out.println("Name: " + testRev.getAuthor());
+//        System.out.println();
+//        System.out.println("Body: " + testRev.getBody());
+//        System.out.println();
+//        System.out.println("Star: " + testRev.getStars());
+//        System.out.println();
+        System.out.println("The Class: " + testRev);
+//        System.out.println();
+//        //AfterReview
+//        System.out.println(testev);
+//        System.out.println("Star: " + testev.getStars());
+//        System.out.println("Name: " + testRes);
 
         //Print Restaurant
-        System.out.println("Name: " + testRes.getName());
-        System.out.println();
-        System.out.println("Price: " + testRes.getPrice());
-        System.out.println();
-        System.out.println("Star: " + testRes.getStar());
-        System.out.println();
-//        System.out.println("Review: " + testRes.addReview(testRev));
-        System.out.println();
-        System.out.println("The Class: " + testRes);
-        System.out.println();
+//        System.out.println("before "+ testRes);
+//        System.out.println("Name: " + testRes.getName());
+//        testRes.addReview(testRev);
+//        System.out.println();
+//        System.out.println("review: " + testRes.getReview());
+//        System.out.println("Stars "+ testRes.checkStars());
+//        System.out.println("After "+ testRes);
+//        System.out.println();
+//        System.out.println("Price: " + testRes.getPriceCategory());
+//        System.out.println();
+//        testRes.addReview(testRev);
+//        testRes.addReview(testev);
+//        System.out.println();
+//        System.out.println("The Class: " + testRes);
+//        System.out.println();
 
-        //Print Review
-
-        System.out.println("Name: " + testRev.getAuthor());
-        System.out.println();
-        System.out.println("Body: " + testRev.getBody());
-        System.out.println();
-        System.out.println("Star: " + testRev.getStars());
-        System.out.println();
-        System.out.println("The Class: " + testRev);
-        System.out.println();
     }
 }
