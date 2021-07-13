@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LibraryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-13T22:32:47" hostname="DESKTOP-0KIMU03" time="0.003">
+  <properties/>
+  <testcase name="ResMethods" classname="LibraryTest" time="0.002"/>
+  <testcase name="RevMethods" classname="LibraryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

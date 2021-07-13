@@ -28,7 +28,14 @@ time : almost 7 hours.
 2. file I/O, that checks the lines that missing semiColon in the code.
 except if the line is empty, or ends with {, or with }, or even if the line contains if or else.
 
-### Lab: 06
+### Lab: 06 : Inheritance and Interfaces
+
+1. Class **Restaurant** ->
+- Includes a name, a number of stars betweeen 0 and 5, and a price category.
+2. Class **Review** ->
+- Includes a body, an author, and a number of stars.
+- A Review is about a single Restaurant. 
+
 
 [Source](https://www.javatips.net/api/OrderNowAndroid-master/src/com/data/menu/Restaurant.java#)
 ---
@@ -41,4 +48,4 @@ except if the line is empty, or ends with {, or with }, or even if the line cont
 |lab02|[Arrays, for loops, testing](basiclibrary/src/main/java/Library.java)|
 |lab03-1|[Maps](basiclibrary/src/main/java/Library.java)|     
 |lab03-2|[File I/O](linter/src/main/java/App.java)|     
-
+|lab06|[Inheritance and Interfaces](inheritance/src/main/java/Library.java)|  
