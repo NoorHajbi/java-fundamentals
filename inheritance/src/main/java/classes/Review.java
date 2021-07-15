@@ -2,7 +2,7 @@ package classes;
 
 import java.util.*;
 
-public class Review implements ReviewInterface {
+public class Review {
     private String body;
     private final String author;
     private int stars;
@@ -24,27 +24,22 @@ public class Review implements ReviewInterface {
         }
     }
 
-    @Override
     public String getBody() {
         return body;
     }
 
-    @Override
     public void setBody(String body) {
         this.body = body;
     }
 
-    @Override
     public String getAuthor() {
         return author;
     }
 
-    @Override
     public int getStars() {
         return stars;
     }
 
-    @Override
     public void setStars(int stars) {
         this.stars = stars;
     }
