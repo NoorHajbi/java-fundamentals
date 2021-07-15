@@ -4,6 +4,8 @@
 
 import classes.Restaurant;
 import classes.Review;
+import classes.Shop;
+import classes.Theater;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,6 +13,15 @@ import static org.junit.Assert.*;
 public class LibraryTest {
     Restaurant testRes = new Restaurant("Burger", 262.2);
     Review testRev = new Review("Great!", "Noor", 5);
+    Shop testShop = new Shop("Avenue Mall","Everything",20.2);
+    Review testTev = new Review("Not Good", "Hala", 1);
+    //Movies
+    String movie1="The Call";
+    String movie2="A Quiet Place";
+    String movie3="Don't Breathe";
+    //Theater
+    Theater testTheater = new Theater("Rex Theatre");
+
 
     @Test
     public void ResMethods() {
@@ -77,6 +88,117 @@ public class LibraryTest {
         //toStringTest
         assertEquals("Review{, body='Great!', author='Noor', stars='5'}",
                 String.valueOf(testRev));
+    }
+    @Test
+    public void ShopMethods() {
+        //Shop before AnyReview
+        assertEquals("Shop {name='Avenue Mall', description='Everything', priceCategory=20.2\n" +
+                ", Shop Review=[]}", String.valueOf(testShop));
+
+        //getName()
+        assertEquals("getName() failed", testShop.getName(), "Avenue Mall");
+
+       //getDescription()
+        assertEquals("getDescription() failed",
+                testShop.getDescription(),
+                "Everything");
+
+        //Review Before
+        assertEquals("Review Before",
+                String.valueOf(testShop.getReview()),
+                "[]");
+        testShop.addReview(testRev);
+        //Review After
+        assertEquals("Review After",
+                String.valueOf(testShop.getReview()),
+                "[Review{, body='Great!', author='Noor', stars='5'}]");
+
+        //toStringTest After
+        assertEquals("Shop {name='Avenue Mall', description='Everything', priceCategory=20.2\n" +
+                        ", Shop Review=[Review{, body='Great!', author='Noor', stars='5'}]}",
+                String.valueOf(testShop));
+    }
+
+    @Test
+    public void TheaterMethods() {
+        //Theater before AnyReview
+        assertEquals("Theater{name=' Rex Theatre', movie= []\n" +
+                ", Theater Reviews= []\n" +
+                ", Movie Reviews= {}}",
+                String.valueOf(testTheater));
+
+        //getName()
+        assertEquals("getName() failed", testTheater.getName(), "Rex Theatre");
+
+        //before Theater review
+        assertEquals("getReview() before Theater review failed",
+                String.valueOf(testTheater.getReview()),
+                "[]");
+
+        //before Movie review
+        assertEquals("getReviews() before Movie review failed",
+                String.valueOf(testTheater.getReviews()),
+                "{}");
+
+        //before add Movie
+        assertEquals("getMovie() before Movie failed",
+                String.valueOf(testTheater.getMovie()),
+                "[]");
+
+        testTheater.addMovie(movie1);
+        testTheater.addMovie(movie2);
+        testTheater.removeMovie(movie1);
+
+        //After remove One Movie
+        assertEquals("getMovie() After remove One Movie failed",
+                String.valueOf(testTheater.getMovie()),
+                "[A Quiet Place]");
+
+        testTheater.removeMovie(movie2);
+
+        //After remove all Movies
+        assertEquals("getMovie() After remove all Movies failed",
+                String.valueOf(testTheater.getMovie()),
+                "[]");
+
+        testTheater.addMovie(movie1);
+        testTheater.addMovie(movie2);
+        testTheater.addMovie(movie3);
+
+        //After add 3 Movies
+        assertEquals("getMovie() After add 3 Movies failed",
+                String.valueOf(testTheater.getMovie()),
+                "[The Call, A Quiet Place, Don't Breathe]");
+
+        testTheater.addReview(testRev);
+
+        //After Theater review
+        assertEquals("[Review{, body='Great!', author='Noor', stars='5'}]",
+                String.valueOf(testTheater.getReview()));
+
+        testTheater.addReview(testRev,movie1);
+
+        //After Movie review
+        assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}}",
+                String.valueOf(testTheater.getReviews()));
+
+        testTheater.addReview(testRev,"hello");
+
+        //after add review for non existing Movie
+        assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}}",
+                String.valueOf(testTheater.getReviews()));
+
+        testTheater.addReview(testTev,movie2);
+
+        //after add multiple reviews
+        assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}, A Quiet Place=Review{, body='Not Good', author='Hala', stars='1'}}",
+                String.valueOf(testTheater.getReviews()));
+
+        //Theater after reviews
+        assertEquals("Theater{name=' Rex Theatre', movie= [The Call, A Quiet Place, Don't Breathe]\n" +
+                        ", Theater Reviews= [Review{, body='Great!', author='Noor', stars='5'}]\n" +
+                        ", Movie Reviews= {The Call=Review{, body='Great!', author='Noor', stars='5'}, A Quiet Place=Review{, body='Not Good', author='Hala', stars='1'}}}",
+                String.valueOf(testTheater));
     }
 
 }

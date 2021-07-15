@@ -41,6 +41,20 @@ except if the line is empty, or ends with {, or with }, or even if the line cont
 - So when a review added, the number of resturant's stars will be changed.
 
 [Source](https://www.javatips.net/api/OrderNowAndroid-master/src/com/data/menu/Restaurant.java#)
+
+### Lab: 07 : Inheritance day2
+
+1. Class **Shop** ->
+- Includes a name, a description, and number of dollar signs.
+- The users can review shops!
+
+2. Class **Theater** ->
+- Includes a name, and all the movies currently showing there.
+- Includes addMovie and removeMovie instance methods,
+  that allow the theater to update which movies are being shown.  
+- A Review can be added to Theater.
+- A Review can be added to Movie.
+
 ---
 # Table of contents: 
 
@@ -52,3 +66,4 @@ except if the line is empty, or ends with {, or with }, or even if the line cont
 |lab03-1|[Maps](basiclibrary/src/main/java/Library.java)|     
 |lab03-2|[File I/O](linter/src/main/java/App.java)|     
 |lab06|[Inheritance and Interfaces](inheritance/src/main/java/Library.java)|  
+|lab07|[Inheritance, day 2](inheritance/src/main/java/Library.java)| 

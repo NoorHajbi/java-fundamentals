@@ -2,17 +2,16 @@ package classes;
 
 import java.util.*;
 
-public class Restaurant {
+public class Restaurant implements Reviewable {
     private final String name;
     private double priceCategory;
-    private final List<Review> review = new ArrayList<>();
 
     public Restaurant(String name, double priceCategory) {
         this.name = name;
         this.priceCategory = priceCategory;
     }
 
-
+    @Override
     public String getName() {
         return name;
     }
@@ -25,15 +24,18 @@ public class Restaurant {
         this.priceCategory = priceCategory;
     }
 
+    @Override
     public List<Review> getReview() {
         return review;
     }
 
+    @Override
     public void addReview(Review review) {
         this.review.add(review);
         checkStars();
     }
 
+    @Override
     public int checkStars() {
         int newStars = 0;
         if (getReview().size() > 0) {

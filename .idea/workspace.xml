@@ -156,11 +156,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/basiclibrary/src/main/java/Library.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/basiclibrary/src/test/java/LibraryTest.java</url>
           <line>11</line>
           <option name="timeStamp" value="7" />

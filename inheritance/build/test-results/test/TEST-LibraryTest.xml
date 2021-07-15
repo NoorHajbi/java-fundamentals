@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LibraryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-13T22:32:47" hostname="DESKTOP-0KIMU03" time="0.003">
+<testsuite name="LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-15T20:58:04" hostname="DESKTOP-0KIMU03" time="0.003">
   <properties/>
-  <testcase name="ResMethods" classname="LibraryTest" time="0.002"/>
-  <testcase name="RevMethods" classname="LibraryTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="TheaterMethods" classname="LibraryTest" time="0.003"/>
+  <system-out><![CDATA[Thank You For Visiting
+Not defined Movie
+Thank You For Visiting
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
