@@ -180,11 +180,25 @@ public class LibraryTest {
 
         //After Movie review
         assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}}",
-                String.valueOf(testTheater.getReview()));
+                String.valueOf(testTheater.getReviews()));
 
+        testTheater.addReview(testRev,"hello");
 
+        //after add review for non existing Movie
+        assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}}",
+                String.valueOf(testTheater.getReviews()));
 
+        testTheater.addReview(testTev,movie2);
 
+        //after add multiple reviews
+        assertEquals("{The Call=Review{, body='Great!', author='Noor', stars='5'}, A Quiet Place=Review{, body='Not Good', author='Hala', stars='1'}}",
+                String.valueOf(testTheater.getReviews()));
+
+        //Theater after reviews
+        assertEquals("Theater{name=' Rex Theatre', movie= [The Call, A Quiet Place, Don't Breathe]\n" +
+                        ", Theater Reviews= [Review{, body='Great!', author='Noor', stars='5'}]\n" +
+                        ", Movie Reviews= {The Call=Review{, body='Great!', author='Noor', stars='5'}, A Quiet Place=Review{, body='Not Good', author='Hala', stars='1'}}}",
+                String.valueOf(testTheater));
     }
 
 }
